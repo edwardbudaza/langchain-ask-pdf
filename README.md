@@ -64,3 +64,19 @@ To run the code:
 5. The Streamlit application will start, and you can interact with it by uploading a PDF file and asking questions about it. The output will be displayed on the web interface. :computer:
 
 Note: Make sure to have the necessary PDF files and replace the `.env` file with your specific environment variables, if required.
+
+### PDF file located  [@link]("pdf/concepts.pdf")
+![Example Image](example3.png)
+
+
+
+
+### Example Questions and Response from pdf above
+<p align="center">
+    <img src="example1.png" alt="Image 1" width="50%" style="object-fit: cover;">
+    <img src="example2.png" alt="Image 1" width="50%" style="object-fit: cover;">
+   
+   
+</p>
+
+
