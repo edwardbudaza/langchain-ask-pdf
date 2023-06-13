@@ -6,10 +6,13 @@ The purpose of this code is to create a Streamlit application that allows users 
 ### Dependencies :wrench:
 The code requires the following dependencies:
 
-- `dotenv`: The Dotenv library for loading environment variables from a `.env` file. :closed_lock_with_key:
-- `streamlit`: The Streamlit library for building interactive web applications. :globe_with_meridians:
-- `PyPDF2`: The PyPDF2 library for reading PDF files. :page_facing_up:
-- `langchain`: The LangChain library for natural language processing and understanding. :speech_balloon:
+- `langchain==0.0.198`: The LangChain library for natural language processing and understanding. :speech_balloon:
+- `openai==0.27.8`: The OpenAI library for language models and AI capabilities. :robot:
+- `PyPDF2==3.0.1`: The PyPDF2 library for reading PDF files. :page_facing_up:
+- `python-dotenv==1.0.0`: The Dotenv library for loading environment variables from a `.env` file. :closed_lock_with_key:
+- `streamlit==1.23.1`: The Streamlit library for building interactive web applications. :globe_with_meridians:
+- `tiktoken==0.4.0`: The Tiktoken library for counting tokens in text. :abacus:
+- `faiss-cpu==1.7.4`: The FAISS library for efficient similarity search and clustering. :mag_right:
 
 ### `extract_text_from_pdf` Function :open_file_folder:
 The `extract_text_from_pdf` function extracts text from a PDF file.
@@ -37,7 +40,7 @@ The `main` function is the entry point of the program. It performs the following
 
 7. Prompts the user to ask a question about the PDF using the Streamlit `text_input` function. The question is stored in the `user_question` variable. :speech_balloon:
 
-8. If a user question is provided (`user_question` is not empty), the code performs a similarity search in the knowledge base to find relevant documents using `similarity_search` method. :mag_right:
+8. If a user question is provided (`user_question` is not empty), the code performs a similarity search in the knowledge base to find relevant documents using the `similarity_search` method. :mag_right:
 
 9. Loads the question-answering chain from `langchain` library. :chains:
 
@@ -48,13 +51,15 @@ The `main` function is the entry point of the program. It performs the following
 ### Running the Code :rocket:
 To run the code:
 
-1. Ensure that all the required dependencies are installed (including `dotenv`, `streamlit`, `PyPDF2`, and `langchain`). :heavy_check_mark:
+1. Ensure that all the required dependencies are installed by running:  
+   ```pip install langchain==0.0.198 openai==0.27.8 PyPDF2==3.0.1 python-dotenv==1.0.0 streamlit==1.23.1 tiktoken==0.4.0 faiss-cpu==1.7.4``` :heavy_check_mark:
 
 2. Save the code in a Python file, for example, `app.py`. :floppy_disk:
 
 3. Open a command prompt or terminal and navigate to the directory containing the Python file. :file_folder:
 
-4. Run the command `streamlit run app.py`. :arrow_forward:
+4. Run the command: 
+    ```streamlit run app.py``` :arrow_forward:
 
 5. The Streamlit application will start, and you can interact with it by uploading a PDF file and asking questions about it. The output will be displayed on the web interface. :computer:
 
