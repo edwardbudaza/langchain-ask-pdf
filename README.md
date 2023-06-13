@@ -1,9 +1,11 @@
 ## Documentation :memo:
 
 ### Purpose :dart:
+
 The purpose of this code is to create a Streamlit application that allows users to upload a PDF file and ask questions about its contents. The code utilizes the `langchain` library to perform question-answering on the PDF text.
 
 ### Dependencies :wrench:
+
 The code requires the following dependencies:
 
 - `langchain==0.0.198`: The LangChain library for natural language processing and understanding. :speech_balloon:
@@ -15,15 +17,19 @@ The code requires the following dependencies:
 - `faiss-cpu==1.7.4`: The FAISS library for efficient similarity search and clustering. :mag_right:
 
 ### `extract_text_from_pdf` Function :open_file_folder:
+
 The `extract_text_from_pdf` function extracts text from a PDF file.
 
 #### Parameters
+
 - `pdf` (File): The PDF file to extract text from.
 
 #### Returns
+
 - `str`: Extracted text from the PDF.
 
 ### `main` Function :computer:
+
 The `main` function is the entry point of the program. It performs the following steps:
 
 1. Loads the environment variables from the `.env` file using `load_dotenv()`. :gear:
@@ -49,34 +55,32 @@ The `main` function is the entry point of the program. It performs the following
 11. Displays the response using the Streamlit `write` function. :speech_balloon:
 
 ### Running the Code :rocket:
+
 To run the code:
 
 1. Ensure that all the required dependencies are installed by running:  
-   ```pip install langchain==0.0.198 openai==0.27.8 PyPDF2==3.0.1 python-dotenv==1.0.0 streamlit==1.23.1 tiktoken==0.4.0 faiss-cpu==1.7.4``` :heavy_check_mark:
+   `pip install langchain==0.0.198 openai==0.27.8 PyPDF2==3.0.1 python-dotenv==1.0.0 streamlit==1.23.1 tiktoken==0.4.0 faiss-cpu==1.7.4` :heavy_check_mark:
 
 2. Save the code in a Python file, for example, `app.py`. :floppy_disk:
 
 3. Open a command prompt or terminal and navigate to the directory containing the Python file. :file_folder:
 
-4. Run the command: 
-    ```streamlit run app.py``` :arrow_forward:
+4. Run the command:
+   `streamlit run app.py` :arrow_forward:
 
 5. The Streamlit application will start, and you can interact with it by uploading a PDF file and asking questions about it. The output will be displayed on the web interface. :computer:
 
 Note: Make sure to have the necessary PDF files and replace the `.env` file with your specific environment variables, if required.
 
-### PDF file located  [@link]("pdf/concepts.pdf")
+### PDF file located [@link]("pdf/concepts.pdf")
+
 ![Example Image](example3.png)
 
-
-
-
 ### Example Questions and Response from pdf above
+
 <p align="center">
-    <img src="example1.png" alt="Image 1" width="50%" style="object-fit: cover;">
-    <img src="example2.png" alt="Image 1" width="50%" style="object-fit: cover;">
+    <img src="example1.png" alt="Image 1" width="80%" style="object-fit: cover;">
+    <img src="example2.png" alt="Image 1" width="80%" style="object-fit: cover;">
    
    
 </p>
-
-
